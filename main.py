@@ -1,20 +1,18 @@
-#!/usr/bin/env python3
-"""The Robot Vacuum's Funniest Excuse — make.fun bounty entry.
+"""The robot vacuum's funniest excuse."""
 
-Writes one line (max 120 chars): the excuse a robot vacuum gives
-for missing a spot. The program writes the line to /output/entry.txt
-and prints it to stdout.
-"""
 
-import os
+def excuse():
+    parts = [
+        "I didn't miss that spot",
+        "the dust bunny there pays rent",
+        "and honestly it cleans up after itself.",
+    ]
+    return " — ".join([parts[0], parts[1]]) + ", " + parts[2]
 
-ENTRY = "I didn't miss that spot \u2014 the dust bunny there pays rent, and honestly it cleans up after itself."
 
 def main():
-    os.makedirs("/output", exist_ok=True)
-    with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(ENTRY)
-    print(ENTRY)
+    print(excuse())
+
 
 if __name__ == "__main__":
     main()
