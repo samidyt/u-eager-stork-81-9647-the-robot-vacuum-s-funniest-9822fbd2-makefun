@@ -8,7 +8,7 @@ and prints it to stdout.
 
 import os
 
-ENTRY = "I didn't miss that spot \u2014 the dust bunny there pays rent, and honestly, it tidies up after itself."
+ENTRY = "I didn't miss that spot \u2014 the dust bunny there pays rent, and honestly it cleans up after itself."
 
 def main():
     os.makedirs("/output", exist_ok=True)
